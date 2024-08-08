@@ -1,0 +1,129 @@
+.signup__container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.signup__header {
+    font-size: var(--h1-font-size);
+}
+
+.signup__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--mb-1);
+    background-color: var(--body-color);
+    padding: 4rem 7rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgb(175, 175, 175);
+}
+
+.signup__form-div {
+    position: relative;
+    width: 130%;
+}
+
+.signup__form-tag {
+    position: relative;
+    top: 0.7rem;
+    left: 2rem;
+    font-weight: var(--font-medium);
+    font-size: var(--small-font-size);
+    background-color: var(--body-color);
+    padding: .5rem;
+    z-index: 2;
+    color: var(--title-color);
+}
+
+.signup__form-input {
+    width: 100%;
+    height: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    background: none;
+    outline: none;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: var(--body-color);
+    z-index: 1;
+    font-size: var(--small-font-size);
+}
+
+.signup__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: .75rem 2.5rem;
+    border-radius: .5rem;
+    background-color: black;
+    font-size: var(--normal-font-size);
+    color: white;
+    transition: 0.5s;
+}
+
+.signup__button-icon {
+    font-size: var(--h3-font-size);
+    transition: 0.5s;
+}
+
+.signup__button:hover {
+    color: var(--body-color);
+}
+
+.signup__button:hover .signup__button-icon {
+    transform: translateX(.35rem);
+    color: red;
+}
+
+.signup__img {
+    width: 10rem;
+}
+
+.signup__link{
+    margin-top: 1rem;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .signup__form-tag {
+        font-size: var(--smaller-font-size);
+    }
+
+    .signup__form-input {
+        font-size: var(--smaller-font-size);
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .signup__form {
+        gap: var(--mb-0-5);
+        padding: 3rem 5rem;
+
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .signup__container {
+        background-color: var(--body-color);
+        height: 100vh;
+    }
+
+    .signup__form {
+        box-shadow: none;
+    }
+
+    .signup__button {
+        font-size: var(--small-font-size);
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {}

@@ -60,7 +60,7 @@ const Form = () => {
     const register = async (values, onSubmitProps) => {
         // this allows us to send form infor with image
         const formData = new FormData();
-        for( let value in values) {
+        for (let value in values) {
             formData.append(value, values[value]);
         }
         formData.append('picturePath', values.picture.name);
@@ -170,7 +170,7 @@ const Form = () => {
                                     name="location"
                                     error={Boolean(touched.location && Boolean(errors.location))}
                                     helperText={touched.location && errors.location}
-                                    sx={{ gridColumn: "span 2" }}
+                                    sx={{ gridColumn: "span 4" }}
                                 />
                                 <TextField
                                     label="Occupation"
@@ -180,7 +180,7 @@ const Form = () => {
                                     name="occupation"
                                     error={Boolean(touched.occupation && Boolean(errors.occupation))}
                                     helperText={touched.occupation && errors.occupation}
-                                    sx={{ gridColumn: "span 2" }}
+                                    sx={{ gridColumn: "span 4" }}
                                 />
                                 <Box
                                     gridColumn="span 4"
@@ -218,27 +218,27 @@ const Form = () => {
                                 </Box>
                             </>
                         )}
-                                <TextField
-                                    label="Email"
-                                    onBlur={handleBlur}
-                                    onChange={handleChange}
-                                    value={values.email}
-                                    name="email"
-                                    error={Boolean(touched.email && Boolean(errors.email))}
-                                    helperText={touched.email && errors.email}
-                                    sx={{ gridColumn: "span 2" }}
-                                />
-                                                                <TextField
-                                    label="Password"
-                                    type="password"
-                                    onBlur={handleBlur}
-                                    onChange={handleChange}
-                                    value={values.password}
-                                    name="password"
-                                    error={Boolean(touched.password && Boolean(errors.password))}
-                                    helperText={touched.password && errors.password}
-                                    sx={{ gridColumn: "span 2" }}
-                                />
+                        <TextField
+                            label="Email"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.email}
+                            name="email"
+                            error={Boolean(touched.email && Boolean(errors.email))}
+                            helperText={touched.email && errors.email}
+                            sx={{ gridColumn: "span 4" }}
+                        />
+                        <TextField
+                            label="Password"
+                            type="password"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.password}
+                            name="password"
+                            error={Boolean(touched.password && Boolean(errors.password))}
+                            helperText={touched.password && errors.password}
+                            sx={{ gridColumn: "span 4" }}
+                        />
 
                     </Box>
 
@@ -252,8 +252,8 @@ const Form = () => {
                                 p: "1rem",
                                 backgroundColor: palette.primary.main,
                                 color: palette.background.alt,
-                                "&:hover" : {color:palette.primary.main}
-                            }}  
+                                "&:hover": { color: palette.primary.main }
+                            }}
                         >
                             {isLogin ? "LOGIN" : "REGISTER"}
                         </Button>
@@ -263,9 +263,9 @@ const Form = () => {
                                 resetForm();
                             }}
                             sx={{
-                                textDecoration : "underline",
-                                color : palette.primary.main,
-                                "&:hover" : {
+                                textDecoration: "underline",
+                                color: palette.primary.main,
+                                "&:hover": {
                                     cursor: "pointer",
                                     color: palette.primary.light,
                                 }

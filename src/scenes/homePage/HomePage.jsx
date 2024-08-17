@@ -1,11 +1,16 @@
 import Navbar from 'scenes/navbar/Navbar'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box } from '@mui/material'
 
 const HomePage = () => {
+
+  
   return (
     <Box>
       <Navbar />
+
+
+
     </Box>
   )
 }

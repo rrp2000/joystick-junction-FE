@@ -102,7 +102,7 @@ const Form = () => {
         if (loggedIn) {
             dispatch(
                 setLogin({
-                    user: loggedIn.payload.userDetails.firstName + " " + loggedIn.payload.userDetails.lastName,
+                    user: loggedIn.payload.userDetails,
                     token: loggedIn.payload.jwt
                 })
             );
